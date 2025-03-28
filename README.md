@@ -25,7 +25,28 @@ Instructions for downloading or generating the 360-degree image canvas.
 
 ### 2 - Download Image Assets
 
-Steps for obtaining the image assets.
+Download the [Flickr30k dataset](https://www.kaggle.com/datasets/hsankesara/flickr-image-dataset).
+
+To categorize the data into the 13 DCASE classes, execute:
+
+```bash
+python categorize_flickr30k.py
+```
+
+<details>
+    <summary>Click to expand</summary>
+
+    Modify the paths within the script to point to your downloaded dataset:
+
+    ```ruby 
+    # Paths
+    metadata_file = "path/to/flickr30k_images/results.csv"  # Path to the Flickr30k metadata file
+    images_dir = "path/to/flickr30k_images/flickr30k_images"  # Path to the Flickr30k images directory
+    output_dir = "path/to/destination/flickr30k_images_per_class"  # Path to the output directory where images will be categorized
+    ```
+
+
+</details>
 
 ### 3 - Download Video Assets
 
