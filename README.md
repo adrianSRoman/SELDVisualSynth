@@ -10,8 +10,8 @@
    1.1 [Download 360-degree Image Canvas](#1---download-360-degree-image-canvas)  
    1.2 [Download Image Assets](#2---download-image-assets)  
    1.3 [Download Video Assets](#3---download-video-assets)  
-      - [Download Pre-recorded Videos](#step-1-download-sample-pre-recorded-videos)  
-      - [YouTube Video Scraping Script](#step-2-youtube-video-scraping-script-scrape_ytpy)  
+      - [Download Pre-recorded Videos](#3.1---download-sample-pre-recorded-videos)  
+      - [YouTube Video Scraping Script](#3.2---youtube-video-scraping)  
 2. [Usage Instructions](#usage-instructions)  
 3. [License](#license)
 
@@ -50,11 +50,11 @@ python categorize_flickr30k.py
 
 ### 3 - Download Video Assets
 
-#### (Method 1) Download Sample Pre-recorded Videos
+#### 3.1 - Download Our Pre-recorded Videos
 
 [Temporary Download URL](<temp-url>)
 
-#### (Method 2) YouTube Video Scraping Script: `scrape_yt.py`
+#### 3.2 - YouTube Video Scraping
 
 This Python script helps you find YouTube videos that match your specified sound event classes.
 
@@ -103,7 +103,6 @@ This Python script helps you find YouTube videos that match your specified sound
 </details>
 
 
-
 ##### Usage
 
 ```
@@ -133,4 +132,6 @@ Run the download script pointing to your generated YT csv file
 ```
 python download.py
 ```
+
+Finally: Include the downloaded YT videos into a unified directory structure as the one from [Download Pre-recorded Videos](#3.1---download-sample-pre-recorded-videos)
 
