@@ -37,9 +37,7 @@ Steps for obtaining the image assets.
 
 This Python script helps you find YouTube videos that match your specified sound event classes.
 
----
-
-### Features
+##### Features
 
 - Searches YouTube for videos matching 13 sound event classes.
 - Uses the YouTube Data API to perform searches.
@@ -47,9 +45,8 @@ This Python script helps you find YouTube videos that match your specified sound
 - Outputs results in CSV format.
 - Filters for shorter videos (under 10 minutes) for cleaner sound examples.
 
----
 
-### Setup Instructions
+##### Setup Instructions
 
 1. Install required packages:
 
@@ -76,7 +73,7 @@ pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib p
  - Follow the authorization prompts when running the script
 
 
-#### Usage
+##### Usage
 
 ```
 python scrape_yt.py --api_key YOUR_API_KEY --results 5 --output youtube_sound_events.csv
@@ -93,7 +90,7 @@ The script will create two files:
 - A CSV file with just the link, start, end, and class (matching your format)
 - A detailed CSV that includes video titles and descriptions
 
-#### Data download
+##### Data download
 
 Run the download script pointing to your generated YT csv file
 
