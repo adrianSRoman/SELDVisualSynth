@@ -38,7 +38,7 @@ python categorize_flickr30k.py
 
     Modify the paths within the script to point to your downloaded dataset:
 
-    ```python 
+    ```
     # Paths
     metadata_file = "path/to/flickr30k_images/results.csv"  # Path to the Flickr30k metadata file
     images_dir = "path/to/flickr30k_images/flickr30k_images"  # Path to the Flickr30k images directory
