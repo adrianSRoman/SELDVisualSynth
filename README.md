@@ -10,8 +10,8 @@
    1.1 [Download 360-degree Image Canvas](#1---download-360-degree-image-canvas)  
    1.2 [Download Image Assets](#2---download-image-assets)  
    1.3 [Download Video Assets](#3---download-video-assets)  
-      - [Download Pre-recorded Videos](#3.1---download-sample-pre-recorded-videos)  
-      - [YouTube Video Scraping Script](#3.2---youtube-video-scraping)  
+      - [Download Pre-recorded Videos](#31---download-our-pre-recorded-videos)   
+      - [YouTube Video Scraping Script](#32---youtube-video-scraping)  
 2. [Usage Instructions](#usage-instructions)  
 3. [License](#license)
 
