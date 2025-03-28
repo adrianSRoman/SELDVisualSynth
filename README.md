@@ -29,48 +29,58 @@ Steps for obtaining the image assets.
 
 ### 3 - Download Video Assets
 
-#### (Step 1) Download Sample Pre-recorded Videos
+#### (Method 1) Download Sample Pre-recorded Videos
 
 [Temporary Download URL](<temp-url>)
 
-#### (Step 2) YouTube Video Scraping Script: `scrape_yt.py`
+#### (Method 2) YouTube Video Scraping Script: `scrape_yt.py`
 
 This Python script helps you find YouTube videos that match your specified sound event classes.
 
 ##### Features
 
-- Searches YouTube for videos matching 13 sound event classes.
-- Uses the YouTube Data API to perform searches.
-- Provides timestamps for each video (start and end).
-- Outputs results in CSV format.
-- Filters for shorter videos (under 10 minutes) for cleaner sound examples.
+<details>
+  <summary>Click to expand</summary>
+  
+  - Searches YouTube for videos matching 13 sound event classes.
+  - Uses the YouTube Data API to perform searches.
+  - Provides timestamps for each video (start and end).
+  - Outputs results in CSV format.
+  - Filters for shorter videos (under 10 minutes) for cleaner sound examples.
 
+</details>
 
 ##### Setup Instructions
 
-1. Install required packages:
+<details>
+  <summary>Click to expand</summary>
+  
+  1. Install required packages:
 
-```
-pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib pandas
-```
+     ```bash
+     pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib pandas
+     ```
 
-2. You'll need YouTube API credentials. You can either:
+  2. You'll need YouTube API credentials. You can either:
 
- - Use an API key (simpler but rate-limited)
- - Set up OAuth 2.0 authentication (more complex but higher quotas)
+     - Use an API key (simpler but rate-limited)
+     - Set up OAuth 2.0 authentication (more complex but higher quotas)
 
-3. For API key:
+  3. For API key:
 
- - Go to the Google Cloud Console
- - Create a new project or select an existing one
- - Enable the YouTube Data API v3
- - Create an API key under "Credentials"
+     - Go to the [Google Cloud Console](https://console.cloud.google.com/)
+     - Create a new project or select an existing one
+     - Enable the YouTube Data API v3
+     - Create an API key under "Credentials"
 
-4. For OAuth (if you don't specify an API key):
+  4. For OAuth (if you don't specify an API key):
 
- - Download the OAuth client configuration file as "`client_secret.json`"
- - Place it in the same directory as the script
- - Follow the authorization prompts when running the script
+     - Download the OAuth client configuration file as `client_secret.json`
+     - Place it in the same directory as the script
+     - Follow the authorization prompts when running the script
+
+</details>
+
 
 
 ##### Usage
