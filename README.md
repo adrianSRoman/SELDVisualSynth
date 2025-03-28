@@ -34,19 +34,19 @@ python categorize_flickr30k.py
 ```
 
 <details>
-    <summary>Click to expand</summary>
+  <summary>Click to expand</summary>
 
-    Modify the paths within the script to point to your downloaded dataset:
+  Modify the paths within the script to point to your downloaded dataset:
 
-    ```
-    # Paths
-    metadata_file = "path/to/flickr30k_images/results.csv"  # Path to the Flickr30k metadata file
-    images_dir = "path/to/flickr30k_images/flickr30k_images"  # Path to the Flickr30k images directory
-    output_dir = "path/to/destination/flickr30k_images_per_class"  # Path to the output directory where images will be categorized
-    ```
-
-
+  ```
+  # Paths
+  metadata_file = "path/to/flickr30k_images/results.csv"  # Path to the Flickr30k metadata file
+  images_dir = "path/to/flickr30k_images/flickr30k_images"  # Path to the Flickr30k images directory
+  output_dir = "path/to/destination/flickr30k_images_per_class"  # Path to the output directory where images will be categorized
+  ```
 </details>
+
+**Note:** Some classes, such as "Water tap, faucet," "Bell," and "Knock," may lack sufficient examples in the Flickr30k dataset. We recommend augmenting these categories by sourcing additional images online or from other datasets. Use the same categorization approach as described for Flickr30k.
 
 ### 3 - Download Video Assets
 
