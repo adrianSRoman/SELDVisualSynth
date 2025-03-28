@@ -89,16 +89,21 @@ This Python script helps you find YouTube videos that match your specified sound
 python scrape_yt.py --api_key YOUR_API_KEY --results 5 --output youtube_sound_events.csv
 ```
 
-Parameters:
+<details>
+    <summary>Click to expand</summary>
 
-`--api_key`: Your YouTube API key (optional if using OAuth)
-`--results`: Number of results to fetch per class (default: 5)
-`--output`: Output CSV file name (default: `youtube_sound_events.csv`)
+    Parameters:
 
-The script will create two files:
+    `--api_key`: Your YouTube API key (optional if using OAuth)
+    `--results`: Number of results to fetch per class (default: 5)
+    `--output`: Output CSV file name (default: `youtube_sound_events.csv`)
 
-- A CSV file with just the link, start, end, and class (matching your format)
-- A detailed CSV that includes video titles and descriptions
+    The script will create two files:
+
+    - A CSV file with just the link, start, end, and class (matching your format)
+    - A detailed CSV that includes video titles and descriptions
+
+</details>
 
 ##### Data download
 
