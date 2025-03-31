@@ -19,11 +19,11 @@
 
 ## Setup Steps
 > [!IMPORTANT] 
-> Please follow the steps below. Note that Step 2 and Step 3 require users to collect their own data and ensure that all collected images and videos are correctly categorized according to the 13 DCASE sound event classes. We recommend reviewing your dataset to confirm that the assets in each category directory aligns with the appropriate category.
+> Please follow the steps below. Note that Step 2 and Step 3 require users to collect their own data and ensure that all collected images and videos are correctly categorized according to the 13 DCASE sound event classes. We recommend reviewing your dataset to confirm that the assets in each category directory aligns with the appropriate category. (Refer to [Sound event classes](https://dcase.community/challenge2023/task-sound-event-localization-and-detection-evaluated-in-real-spatial-sound-scenes))
 
 ### 1 - Download 360-degree Image Canvas
 
-Instructions for downloading or generating the 360-degree image canvas.
+Please download the 360-degree image assets to use as canvas/background for the 360 image generation > [Download](https://drive.google.com/drive/u/0/folders/1TJNLzU3QpCZAXWk2mU7-MS7RjcBeP-Lf)
 
 ### 2 - Download Image Assets
 
