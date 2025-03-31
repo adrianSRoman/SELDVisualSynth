@@ -18,6 +18,8 @@
 ---
 
 ## Setup Steps
+> [!IMPORTANT] 
+> Please follow the steps below. Note that Step 2 and Step 3 require users to collect their own data and ensure that all collected images and videos are correctly categorized according to the 13 DCASE sound event classes. We recommend reviewing your dataset to confirm that the assets in each category directory aligns with the appropriate category.
 
 ### 1 - Download 360-degree Image Canvas
 
