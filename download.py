@@ -3,22 +3,23 @@ from pytube import YouTube
 from moviepy.video.io.VideoFileClip import VideoFileClip, AudioFileClip
 import os
 from pydub import AudioSegment
+import yt_dlp
 
 # Directory names for each class
 class_directories = {
-    '0': 'Class_0_Female_Speech',
-    '1': 'Class_1_Male_Speech',
-    '2': 'Class_2_Clapping',
-    '3': 'Class_3_Telephone',
-    '4': 'Class_4_Laughter',
-    '5': 'Class_5_Domestic_Sounds',
-    '6': 'Class_6_Walk_Footsteps',
-    '7': 'Class_7_Door_Open_Close',
-    '8': 'Class_8_Music',
-    '9': 'Class_9_Musical_Instrument',
-    '10': 'Class_10_Water_Tap_Faucet',
-    '11': 'Class_11_Bell',
-    '12': 'Class_12_Knock'
+    '0': 'Class_0',
+    '1': 'Class_1',
+    '2': 'Class_2',
+    '3': 'Class_3',
+    '4': 'Class_4',
+    '5': 'Class_5',
+    '6': 'Class_6',
+    '7': 'Class_7',
+    '8': 'Class_8',
+    '9': 'Class_9',
+    '10': 'Class_10',
+    '11': 'Class_11',
+    '12': 'Class_12'
 }
 
 def ensure_directory_structure():
@@ -30,28 +31,39 @@ def ensure_directory_structure():
         if not os.path.exists(class_dir_path):
             os.mkdir(class_dir_path)
 
+
 def download_and_trim(url, start_time, end_time, class_label, sequence_number):
+    temp_filename = "temp_video.mp4"
     try:
-        yt = YouTube(url)
-        stream = yt.streams.filter(file_extension="mp4", progressive=True).first() #yt.streams.get_highest_resolution()
-        temp_filename = f"{yt.video_id}.mp4"
+        # Normalize URL for shorts
+        if "youtube.com/shorts/" in url:
+            video_id = url.split("/")[-1]
+            url = f"https://www.youtube.com/watch?v={video_id}"
 
-        # Download to a temporary file
-        stream.download(filename=temp_filename)
+        # Download video using yt_dlp
+        ydl_opts = {
+            'outtmpl': temp_filename.replace(".mp4", ".%(ext)s"),  # Ensure correct extension
+            'format': 'bestvideo+bestaudio/best',
+            'merge_output_format': 'mp4',  # Ensure the final format is mp4
+        }
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            ydl.download([url])
 
+        # Trim and save video
         output_directory = os.path.join(dataset_base_dir, class_directories[class_label])
+        os.makedirs(output_directory, exist_ok=True)
         output_filename = os.path.join(output_directory, f"clip{sequence_number}.mp4")
-        
-        # Trim the video
-        with VideoFileClip(temp_filename) as video:
-            new = video.subclip(start_time, end_time)
-            audio = AudioFileClip(temp_filename).subclip(start_time, end_time)
-            new = new.set_audio(audio)
-            new.write_videofile(output_filename, codec="libx264", audio_codec="aac")
 
-        os.remove(temp_filename)
+        with VideoFileClip(temp_filename) as video:
+            trimmed_video = video.subclip(start_time, end_time)
+            trimmed_video.write_videofile(output_filename, codec="libx264", audio_codec="aac")
+
     except Exception as e:
         print(f"Error processing {url}: {e}")
+    finally:
+        # Clean up temporary files
+        if os.path.exists(temp_filename):
+            os.remove(temp_filename)
 
 def convert_time(time_str):
     h, m, s = 0, 0, 0
