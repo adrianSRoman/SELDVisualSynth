@@ -11,7 +11,7 @@ sound_classes = {
     3: ["telephone ringing", "cellphone", "telephone"],
     4: ["laughing"],
     5: ["dishes", "vacuum cleaner", "kitchen dishes", "dish washing", "brooming"],
-    6: ["running on", "walking on", "walking"],
+    6: ["running on", "walking on", "walking", "footsteps"],
     7: ["door opening", "door closing", "door asmr", "door creak"],
     8: ["music band", "orchestra"],
     9: ["musical instrument", "guitarist", "violinist", "piano", "drum", "cello"],
