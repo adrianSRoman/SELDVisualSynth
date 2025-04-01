@@ -79,7 +79,9 @@ python categorize_flickr30k.py
 
 #### 3.1 - Download Our Pre-recorded Videos
 
-[Temporary Download URL](<temp-url>)
+We provide some samples videos to illustrate the type of videos we use as video assets. These could be used for training, however, we recommend having more samples to achieve diverse visual synthesis. Refer to section 2 and 3.2.
+
+[Download pre-recorded videos](https://drive.google.com/drive/folders/1Wwnzf2gv_E196yjDWIf47awtNLS-sFWr?usp=sharing)
 
 #### 3.2 - YouTube Video Scraping
 
