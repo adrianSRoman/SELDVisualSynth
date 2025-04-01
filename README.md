@@ -12,14 +12,15 @@
    1.3 [Download Video Assets](#3---download-video-assets)  
       - [Download Pre-recorded Videos](#31---download-our-pre-recorded-videos)   
       - [YouTube Video Scraping Script](#32---youtube-video-scraping)  
-2. [Usage Instructions](#usage-instructions)  
-3. [Citation](#citation)
+2. [Usage Instructions](#usage-instructions) 
+3. [Recommended Datasets Structure](#recommended-datasets-structure)
+4. [Citation](#citation)
 
 ---
 
 ## Setup Steps
 > [!IMPORTANT] 
-> Please follow the steps below. Note that Step 2 and Step 3 require users to collect their own data and ensure that all collected images and videos are correctly categorized according to the 13 DCASE sound event classes. We recommend reviewing your dataset to confirm that the assets in each category directory aligns with the appropriate category. (Refer to [Sound event classes](https://dcase.community/challenge2023/task-sound-event-localization-and-detection-evaluated-in-real-spatial-sound-scenes))
+> Please follow the steps below. Note that Step 2 and Step 3 require users to collect their own data and ensure that all collected images and videos are correctly categorized according to the 13 DCASE sound event classes. We recommend reviewing your dataset to confirm that the assets in each directory align with the corresponding category. (Refer to [Sound event classes](https://dcase.community/challenge2023/task-sound-event-localization-and-detection-evaluated-in-real-spatial-sound-scenes))
 
 ### 1 - Download 360-degree Image Canvas
 
@@ -48,7 +49,8 @@ python categorize_flickr30k.py
   ```
 </details>
 
-**Note:** Some classes, such as "Water tap, faucet," "Bell," and "Knock," may lack sufficient examples in the Flickr30k dataset. We recommend augmenting these categories by sourcing additional images online or from other datasets. Use the same categorization approach as described for Flickr30k.
+> [!NOTE] 
+> Some classes, such as "Water tap, faucet," "Bell," and "Knock," may lack sufficient examples in the Flickr30k dataset. We recommend augmenting these categories by sourcing additional images online or from other datasets. Use the same categorization approach as described for Flickr30k.
 
 ### 3 - Download Video Assets
 
@@ -153,20 +155,91 @@ Execute SELD visual synthesizer by:
 python visual_synth.py --config configs/visual_config.yaml
 ```
 
+## Recommended Datasets Structure
+
+360-degree image backgrounds
+```
+image_360_path/
+    ├── image1.jpg
+    ├── image2.jpg
+    ├── ...
+```
+
+360-degree video backgrounds (optional, but recommended)
+```
+video_360_path/
+    ├── video1.mp4
+    ├── video2.mp4
+    ├── ...
+```
+
+Directory containing video assets by event class (video "tiles")
+```
+video_assets_dir/
+    ├── Class_0/
+    │   ├── video1.mp4
+    │   ├── video2.mp4
+    │   ├── ...
+    ├── Class_1/
+    │   ├── video1.mp4
+    │   ├── video2.mp4
+    │   ├── ...
+    ├── ...
+    ├── Class_12/
+    │   ├── video1.mp4
+    │   ├── video2.mp4
+    │   ├── ...
+```
+
+Directory containing image assets by event class (image "tiles"). Both jpeg or png are supported.
+```
+image_assets_dir/
+    ├── Class_0/
+    │   ├── image1.jpeg
+    │   ├── image2.png
+    │   ├── ...
+    ├── Class_1/
+    │   ├── image1.jpeg
+    │   ├── image2.png
+    │   ├── ...
+    ├── ...
+    ├── Class_12/
+    │   ├── image1.jpeg
+    │   ├── image2.png
+    │   ├── ...
+
+```
+
+Metadata directory containing metadata CSV files (DCASE-style metadata)
+```
+metadata_dir/
+    ├── dev-train-tau/     # From STARSS23
+    │   ├── file1.csv
+    │   ├── ...
+    ├── dev-train-sony/    # From STARSS23
+    │   ├── file1.csv
+    │   ├── ...
+    ├── dev-test-tau/      # From STARSS23
+    │   ├── file1.csv
+    │   ├── ...
+    ├── dev-test-sony/     # From STARSS23
+    │   ├── file1.csv
+    │   ├── ...
+    ├── dev-train-synth/   # From SpatialScaper
+    │   ├── file1.csv
+    │   ├── ...
+```
+
 ## Citation
 
 If you find our work useful, please cite our paper:
 
 ```
-TBD
-```
-
-```
-@article{roman2024enhanced,
-  title={Enhanced Sound Event Localization and Detection in Real 360-degree audio-visual soundscapes},
-  author={Roman, Adrian S and Balamurugan, Baladithya and Pothuganti, Rithik},
-  journal={arXiv preprint arXiv:2401.17129},
-  year={2024}
+@article{roman2025enhanced,
+  title={Generating Diverse Audio-Visual 360º Soundscapes for Sound Event Localization and Detection},
+  author={Roman, Adrian S and Chang, Aiden and Meza, Gerardo and Roman, Iran I},
+  journal={arXiv},
+  year={2025}
 }
 ```
 
