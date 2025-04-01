@@ -20,10 +20,10 @@ sound_classes = {
     12: ["door knock", "knock table"]
 }
 
-# Paths
-metadata_file = "/Users/adrianromanguzman/Downloads/flickr30k_images/results.csv"  # Path to the Flickr30k metadata file
-images_dir = "/Users/adrianromanguzman/Downloads/flickr30k_images/flickr30k_images"  # Path to the Flickr30k images directory
-output_dir = "flickr30k_images_per_class"  # Path to the output directory where images will be categorized
+# Define paths
+metadata_file = "/path/to/flickr30k_images/results.csv"  # Path to the Flickr30k metadata file
+images_dir = "/path/to/flickr30k_images/flickr30k_images"  # Path to the Flickr30k images directory
+output_dir = "./flickr30k_images_per_class"  # Path to the output directory where images will be categorized
 
 # Create output directories for each class
 for class_id in sound_classes.keys():
