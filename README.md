@@ -24,7 +24,9 @@
 
 ### 1 - Download 360-degree Image Canvas
 
-Please download the 360-degree image assets to use as canvas/background for the 360 image generation > [Download](https://drive.google.com/drive/u/0/folders/1TJNLzU3QpCZAXWk2mU7-MS7RjcBeP-Lf)
+Please download the 360-degree image assets to use as canvas/background for the 360 image generation
+
+[Download](https://drive.google.com/drive/u/0/folders/1TJNLzU3QpCZAXWk2mU7-MS7RjcBeP-Lf)
 
 ### 2 - Download Image Assets
 
@@ -60,7 +62,7 @@ python categorize_flickr30k.py
 
 #### 3.2 - YouTube Video Scraping
 
-This Python script helps you find YouTube videos that match your specified sound event classes.
+The script `scrape_yt.py` helps you find YouTube videos that match your specified sound event classes.
 
 ##### Features
 
@@ -235,7 +237,7 @@ metadata_dir/
 If you find our work useful, please cite our paper:
 
 ```
-@article{roman2025enhanced,
+@article{roman2025generating,
   title={Generating Diverse Audio-Visual 360º Soundscapes for Sound Event Localization and Detection},
   author={Roman, Adrian S and Chang, Aiden and Meza, Gerardo and Roman, Iran I},
   journal={arXiv},
