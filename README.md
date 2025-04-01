@@ -159,7 +159,7 @@ python download.py
 Finally: Include the downloaded YT videos into a unified directory structure as the one from [Download Pre-recorded Videos](#3.1---download-sample-pre-recorded-videos)
 
 > [!NOTE]
-> Some classes, such as "Water tap, faucet," "Bell," and "Knock," may lack sufficient examples in the Flickr30k dataset. We recommend augmenting these categories by sourcing additional images online or from other datasets. Use the same categorization approach as described for Flickr30k.
+> Some classes, such as "Footsteps," "Bell," "Knock," and "Music" may require manual inspection after downloding. Ideally you want the object playing the main role in a video, rather than a secondary role. Note you can adjust the start and end time in the csv file to trim the videos idurations as desired. 
 
 ## Usage Instructions
 
