@@ -246,7 +246,7 @@ If you find our work useful, please cite our paper:
 ```
 @article{roman2025generating,
   title={Generating Diverse Audio-Visual 360º Soundscapes for Sound Event Localization and Detection},
-  author={Roman, Adrian S and Chang, Aiden and Meza, Gerardo and Roman, Iran I},
+  author={Roman, Adrian S and Chang, Aiden and Meza, Gerardo and Roman, Iran R},
   journal={arXiv},
   year={2025}
 }
