@@ -234,18 +234,6 @@ image_assets_dir/
 Metadata directory containing metadata CSV files (DCASE-style metadata)
 ```
 metadata_dir/
-    ├── dev-train-tau/     # From STARSS23
-    │   ├── file1.csv
-    │   ├── ...
-    ├── dev-train-sony/    # From STARSS23
-    │   ├── file1.csv
-    │   ├── ...
-    ├── dev-test-tau/      # From STARSS23
-    │   ├── file1.csv
-    │   ├── ...
-    ├── dev-test-sony/     # From STARSS23
-    │   ├── file1.csv
-    │   ├── ...
     ├── dev-train-synth/   # From SpatialScaper
     │   ├── file1.csv
     │   ├── ...
