@@ -45,7 +45,7 @@ pip install -r requirements.txt
 
 ### 1 - Download 360-degree Image Canvas
 
-Please download the 360-degree image assets to use as canvas/background for the 360 image generation
+Please download the 360-degree image assets to use as canvas/background for the video generation
 
 [Download](https://drive.google.com/drive/u/0/folders/1TJNLzU3QpCZAXWk2mU7-MS7RjcBeP-Lf)
 
