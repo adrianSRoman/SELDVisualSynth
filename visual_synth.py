@@ -172,7 +172,7 @@ class VisualSynthesizer:
     def generate_visual_event_from_metadata(self, metadata_path, mix_name):
         """Generate audiovisual content using pre-defined metadata"""
         self.events_history, self.metadata_by_frame = self.load_predefined_metadata(metadata_path)
-        self.generate_video_mix_360(os.path.join("output/video/", mix_name))
+        self.generate_video_mix_360(mix_name)
 
     def generate_video_mix_360(self, mix_name):
         """Create VideoWriter for the output video"""
@@ -515,7 +515,7 @@ def main():
         print(f"Found {len(processed_files)} already processed files")
     
     # Get all CSV files in the metadata directory
-    csv_files = glob.glob(os.path.join(config['input']['metadata_dir'], '*.csv'))
+    csv_files = glob.glob(os.path.join(config['input']['metadata_dir'], '**', '*.csv'), recursive=True)
     
     if not csv_files:
         print(f"No CSV files found in {config['input']['metadata_dir']}")
