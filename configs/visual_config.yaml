@@ -4,22 +4,22 @@
 input:
   # Path to the 360-degree video dataset to use as canvas (null if not using video)
   # This should be a directory containing video files
-  video_360_path: "/scratch/data/audio-visual-seld-dcase2023/data_dcase2023_task3/video_dev/dev-train-tau-aug-acs"
+  video_360_path: null
   # Path to the 360-degree image dataset to use as canvas
   # This should be a directory containing image files
-  image_360_path: "/scratch/ssd1/audiovisual_datasets/Img_360"
+  image_360_path: "/path/to/Img_360/"
   # Path to directory containing video assets by event class
-  video_assets_dir: "/scratch/ssd1/audiovisual_datasets/class_events"
-  # Path to directory containing image assets by event class (optional)
-  image_assets_dir: "/scratch/ssd1/audiovisual_datasets/flickr30k_images_per_class/"
+  video_assets_dir: "/path/to/downloaded_video_assets/"
+  # Path to directory containing image assets by event class
+  image_assets_dir: "/path/to/flickr30k_images_per_class/"
   # Path to metadata directory containing metadata CSV files (DCASE metadata)
-  metadata_dir: "/scratch/ssd1/audiovisual_datasets/soundq2_dataset/metadata"
+  metadata_dir: "/path/to/output_spatial_scaper/metadata"
 
 # Output paths
 output:
   # Directory to save generated videos
-  video_dir: "/scratch/ssd1/audiovisual_datasets/soundq2_dataset/videos"
-  log_file: "/scratch/ssd1/audiovisual_datasets/soundq2_dataset/processing_log.txt"
+  video_dir: "/path/to/output/videos"
+  log_file: "/path/to/output/processing_log.txt"
 
 # Processing parameters
 processing:
