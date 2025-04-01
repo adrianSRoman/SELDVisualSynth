@@ -4,6 +4,10 @@
 [![Python](https://img.shields.io/badge/Python-3.8%2B-orange?logo=python)](https://www.python.org/)
 [![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
+<p align="center">
+  <img src="figures/SELDVisualSynth_Figure.png" alt="SELDVisualSynth Visualization" width="800"/>
+</p>
+
 **SELDVisualSynth** is a Python tool designed to generate synthetic visual mixtures tailored for the audio-visual DCASE Challenge Task 3. This tool creates 360-degree synthetic videos based on DCASE CSV metadata files, which provide per-frame information about sound event locations in 3D space. For each sound event specified in the metadata, SELDVisualSynth randomly selects a corresponding visual representation from a library of video and image assets. These assets are then spatially positioned in the video according to their specified coordinates, simulating the visual side of sounds in a dynamic and immersive way.
 
 ---
