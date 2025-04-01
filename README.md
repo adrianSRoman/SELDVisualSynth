@@ -1,11 +1,16 @@
 # SELDVisualSynth
 
+[![Platform](https://img.shields.io/badge/Platform-linux-lightgrey?logo=linux)](https://www.linux.org/)
+[![Python](https://img.shields.io/badge/Python-3.8%2B-orange?logo=python)](https://www.python.org/)
+[![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
 **SELDVisualSynth** is a Python tool designed to generate synthetic visual mixtures tailored for the audio-visual DCASE Challenge Task 3. This tool creates 360-degree synthetic videos based on DCASE CSV metadata files, which provide per-frame information about sound event locations in 3D space. For each sound event specified in the metadata, SELDVisualSynth randomly selects a corresponding visual representation from a library of video and image assets. These assets are then spatially positioned in the video according to their specified coordinates, simulating the visual side of sounds in a dynamic and immersive way.
 
 ---
 
 ## Table of Contents
 
+0. [Installation](#installation)
 1. [Setup Steps](#setup-steps)  
    1.1 [Download 360-degree Image Canvas](#1---download-360-degree-image-canvas)  
    1.2 [Download Image Assets](#2---download-image-assets)  
@@ -17,6 +22,18 @@
 4. [Citation](#citation)
 
 ---
+
+## Installation
+
+Create a Virtual Environment
+```
+python3 -m venv pyenv
+```
+
+Install requirements
+```
+pip install -r requirements.txt
+```
 
 ## Setup Steps
 > [!IMPORTANT] 
@@ -141,6 +158,8 @@ python download.py
 
 Finally: Include the downloaded YT videos into a unified directory structure as the one from [Download Pre-recorded Videos](#3.1---download-sample-pre-recorded-videos)
 
+> [!NOTE]
+> Some classes, such as "Water tap, faucet," "Bell," and "Knock," may lack sufficient examples in the Flickr30k dataset. We recommend augmenting these categories by sourcing additional images online or from other datasets. Use the same categorization approach as described for Flickr30k.
 
 ## Usage Instructions
 
