@@ -258,3 +258,13 @@ If you find our work useful, please cite our paper:
 }
 ```
 
+```
+@inproceedings{roman2024spatial,
+  title={Spatial Scaper: a library to simulate and augment soundscapes for sound event localization and detection in realistic rooms},
+  author={Roman, Iran R and Ick, Christopher and Ding, Sivan and Roman, Adrian S and McFee, Brian and Bello, Juan P},
+  booktitle={IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year={2024},
+  organization={IEEE}
+}
+```
+
