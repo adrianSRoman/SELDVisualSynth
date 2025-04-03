@@ -29,7 +29,7 @@
 
 ## Installation
 
-Create a Virtual Environment
+Create a Virtual Environment (Python 3.8+ is recommended)
 ```
 python3 -m venv pyenv
 ```
