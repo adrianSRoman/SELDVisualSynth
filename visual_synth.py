@@ -194,8 +194,8 @@ class VisualSynthesizer:
                     azimuth, elevation = event_data['azimuth'], event_data['elevation']
                 
                     # Convert to projection coordinates (keeping the projection logic from original code)
-                    azimuth_proj = azimuth + 180
-                    elevation_proj = (-1) * elevation + 90
+                    azimuth_proj = (-1) * azimuth + 180 # azimuth angle is increasing counter-clockwise (ϕ=90-degree at the left).
+                    elevation_proj = (-1) * elevation + 90 
                 
                     # Find the corresponding event in events_history
                     for event in self.events_history:
