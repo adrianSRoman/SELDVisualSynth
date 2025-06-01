@@ -25,7 +25,8 @@
       - [YouTube Video Scraping Script](#32---youtube-video-scraping)  
 2. [Usage Instructions](#usage-instructions) 
 3. [Recommended Datasets Structure](#recommended-datasets-structure)
-4. [Citation](#citation)
+4. [Datasets Summary](#datasets-summary)
+5. [Citation](#citation)
 
 ---
 
@@ -247,6 +248,16 @@ metadata_dir/
     │   ├── file1.csv
     │   ├── ...
 ```
+
+## Datasets Summary
+
+| Dataset     | URL                                                                                 |
+|-------------|-------------------------------------------------------------------------------------|
+| 360-degree Image Canvas (background) | [Link](https://drive.google.com/drive/u/0/folders/1TJNLzU3QpCZAXWk2mU7-MS7RjcBeP-Lf) |
+| Flickr30k Image Dataset (foreground) | [Link](https://www.kaggle.com/datasets/hsankesara/flickr-image-dataset)|
+| Sample Pre-Recorded Videos (foreground) | [Link](https://drive.google.com/drive/folders/1Wwnzf2gv_E196yjDWIf47awtNLS-sFWr?usp=sharing)|
+| YouTube Videos (foreground) | Download using `scrape_yt.py` |
+| SpatialScaper Simulated Audio | [Link](https://github.com/marl/SpatialScaper) |
 
 ## Citation
 
