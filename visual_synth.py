@@ -297,8 +297,8 @@ class VisualSynthesizer:
     def overlay_frame_on_360(self, frame_360, overlay_frame, azimuth, elevation):
         overlay_height, overlay_width, _ = overlay_frame.shape
 
-        x = int((azimuth / 360.0) * self.frame_width)
-        y = int((elevation / 180.0) * self.frame_height)
+        x = int((azimuth / 360.0) * self.frame_width - (overlay_width / 2))
+        y = int((elevation / 180.0) * self.frame_height - (overlay_height / 2))
 
         x = max(0, min(x, self.frame_width - overlay_width))
         y = max(0, min(y, self.frame_height - overlay_height))
