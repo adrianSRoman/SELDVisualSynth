@@ -95,6 +95,9 @@ def main():
     parser.add_argument('--output', type=str, default='youtube_sound_events.csv', help='Output CSV file')
     args = parser.parse_args()
     
+    # Set up YouTube API client
+    youtube = setup_youtube_api(args.api_key)
+    
     # Define sound event classes and search terms
     sound_classes = {
         0: ["female vlogger on camera", "woman speaking", "female talking", "woman talking on camera"],
