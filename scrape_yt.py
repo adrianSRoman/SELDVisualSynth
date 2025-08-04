@@ -86,7 +86,7 @@ def get_video_duration(youtube, video_id):
         s = duration_str.replace("S", "")
         if s:
             seconds += int(s)
-    return seconds
+    return max(0, seconds - 1) # prevent the youtube api from rounding up
 
 def main():
     parser = argparse.ArgumentParser(description='Search YouTube for sound event videos')
@@ -94,9 +94,6 @@ def main():
     parser.add_argument('--results', type=int, default=5, help='Number of results per class')
     parser.add_argument('--output', type=str, default='youtube_sound_events.csv', help='Output CSV file')
     args = parser.parse_args()
-    
-    # Set up YouTube API client
-    youtube = setup_youtube_api(args.api_key)
     
     # Define sound event classes and search terms
     sound_classes = {
