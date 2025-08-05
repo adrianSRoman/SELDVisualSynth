@@ -86,7 +86,7 @@ def get_video_duration(youtube, video_id):
         s = duration_str.replace("S", "")
         if s:
             seconds += int(s)
-    return seconds
+    return max(0, seconds - 1) # prevent the youtube api from rounding up
 
 def main():
     parser = argparse.ArgumentParser(description='Search YouTube for sound event videos')
